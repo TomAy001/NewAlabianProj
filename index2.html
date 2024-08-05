@@ -46,6 +46,7 @@
                     }
                 })
                 .catch(error => {
+                    newsContainer.innerHTML = `<p class="text-danger">Error fetching news: ${error.message}</p>`;
                     console.error('Error fetching news:', error);
                 });
         };
